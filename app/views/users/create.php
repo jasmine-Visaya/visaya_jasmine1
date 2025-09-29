@@ -7,12 +7,18 @@
   <link rel="stylesheet" href="<?=base_url();?>/public/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<style>
+      .container{
+      background: rgba(255, 196, 242, 0.27); /* translucent white */
+      backdrop-filter: blur(5px); /* blur the bg behind */
+      -webkit-backdrop-filter: blur(5px);
+    }
+</style>
 
 
+<body class="bg-gray-100 flex items-center justify-center min-h-screen container">
 
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-
-  <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
+  <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md ">
     <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">Create an Account</h1>
 
     <form action=" <?=site_url('users/create');?> " method="POST" class="space-y-4">
