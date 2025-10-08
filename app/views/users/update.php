@@ -69,7 +69,7 @@
       <div>     
         <?php if ($logged_in_user['role'] === 'admin'): ?>
             <label for="role">Role</label>
-            <select name="role" class="transparent-dropdown mt-1 block w-full px-4 py-2 border bg-purple-200 border-purple-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:outline-none">
+            <select name="role" class="transparent-dropdown">
                 <option value="admin" <?= $user['role']=='admin'?'selected':''; ?>>Admin</option>
                 <option value="user" <?= $user['role']=='user'?'selected':''; ?>>User</option>
             </select>
