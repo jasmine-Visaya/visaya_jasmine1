@@ -13,6 +13,22 @@
       backdrop-filter: blur(5px); /* blur the bg behind */
       -webkit-backdrop-filter: blur(5px);
     }
+  .transparent-dropdown {
+  background: transparent;     /* removes solid background */
+  border: 1px solid #ccc;      /* optional: light border */
+  color: #000;                 /* text color */
+  padding: 5px 10px;
+  border-radius: 5px;
+  appearance: none;            /* removes default arrow styling (for Chrome/Safari) */
+  -webkit-appearance: none;    /* for WebKit browsers */
+  -moz-appearance: none;       /* for Firefox */
+  outline: none;
+}
+
+.transparent-dropdown:focus {
+  border-color: #999;          /* optional focus effect */
+  background: rgba(255, 255, 255, 0.2); /* slight transparency when focused */
+}
 </style>
 
 
@@ -46,7 +62,7 @@
       <!-- Role Selection -->
       <div>   
         <label for="role" class="block text-sm font-medium text-gray-700">Role</label>
-        <select id="role" name="role" required
+        <select id="role" name="role" required transparent-dropdown
           class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
           <option value="user">User</option>
           <option value="admin">Admin</option>
