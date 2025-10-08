@@ -20,6 +20,22 @@
       backdrop-filter: blur(5px); /* blur the bg behind */
       -webkit-backdrop-filter: blur(5px);
     }
+        .transparent-dropdown {
+  background: transparent;     /* removes solid background */
+  border: 1px solid #ccc;      /* optional: light border */
+  color: #000;                 /* text color */
+  padding: 5px 10px;
+  border-radius: 5px;
+  appearance: none;            /* removes default arrow styling (for Chrome/Safari) */
+  -webkit-appearance: none;    /* for WebKit browsers */
+  -moz-appearance: none;       /* for Firefox */
+  outline: none;
+}
+
+.transparent-dropdown:focus {
+  border-color: #999;          /* optional focus effect */
+  background: rgba(255, 255, 255, 0.2); /* slight transparency when focused */
+}
 </style>
 
 
@@ -53,7 +69,7 @@
       <div>     
         <?php if ($logged_in_user['role'] === 'admin'): ?>
             <label for="role">Role</label>
-            <select name="role">
+            <select name="role" class="transparent-dropdown mt-1 block w-full px-4 py-2 border bg-purple-200 border-purple-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:outline-none">
                 <option value="admin" <?= $user['role']=='admin'?'selected':''; ?>>Admin</option>
                 <option value="user" <?= $user['role']=='user'?'selected':''; ?>>User</option>
             </select>
