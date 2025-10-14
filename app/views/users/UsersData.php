@@ -26,7 +26,7 @@
       text-align: center;
       padding: 20px;
       margin: 0;
-      background: #5f0b51ff;
+      background: #5f0d79ff;
       color: white;
       font-size: 28px;
     }
@@ -47,7 +47,7 @@
     }
 
     th {
-      background-color: #5f0b51ff;
+      background-color: #5f0d79ff;
       color: white;
       font-size: 16px;
     }
