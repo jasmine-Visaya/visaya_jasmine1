@@ -201,7 +201,7 @@
       <td><?= $user['username']; ?></td>
       <td><?= $user['email']; ?></td>
       <td><?= $user['role']; ?></td>
-      <td><a href="<?=site_url('users/update/'.$user['id']);?>" class="link-update">Update </a> | 
+      <td><a href="<?=site_url('users/update/'.$user['id']);?>" class="link-update">Update </a> 
       <a href="<?=site_url('users/delete/'.$user['id']);?>" class="link-delete">Delete</a></td>
     </tr>
     <?php endforeach; ?>
